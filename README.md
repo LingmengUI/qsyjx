@@ -2,19 +2,24 @@
 
 一个强大的视频解析和下载工具，支持多个主流平台。
 
-![下载量](https://img.shields.io/github/downloads/your-username/qsyjx/total)
-![Stars](https://img.shields.io/github/stars/your-username/qsyjx)
-![许可证](https://img.shields.io/github/license/your-username/qsyjx)
+![下载量](https://img.shields.io/github/downloads/LingmengUI/qsyjx/total)
+![Stars](https://img.shields.io/github/stars/LingmengUI/qsyjx)
+![许可证](https://img.shields.io/github/license/LingmengUI/qsyjx)
 
 ## 预览
 
 <div align="center">
   <img src="screenshots/light-mode.png" alt="浅色模式" width="45%">
   <img src="screenshots/dark-mode.png" alt="深色模式" width="45%">
+  <img src="screenshots/light1-mode.png" alt="后端" width="45%">
+  <img src="screenshots/light2-mode.png" alt="后端" width="45%">
 </div>
 
 <div align="center">
   <img src="screenshots/mobile.png" alt="移动端" width="30%">
+  <img src="screenshots/mobile2.png" alt="移动端" width="30%">
+  <img src="screenshots/mobile3.png" alt="移动端" width="30%">
+  <img src="screenshots/mobile4.png" alt="移动端" width="30%">
 </div>
 
 ## 功能特点
@@ -24,6 +29,8 @@
 - 🖼️ 支持图集解析和下载
 - 🌓 深色/浅色主题切换
 - 📱 完美支持移动端
+- 📊 数据统计功能
+- ⚙️ 系统设置功能
 
 ## 支持平台
 
@@ -40,11 +47,8 @@
 
 ## 部署方式
  **Node.js不得低于20版本**
-
-
-## 下载安装包
- **把env.example改成.env，切记**
-
+ **Redis必须安装**
+ **MySQL必须安装**
 
 ### 本地开发
 1. **安装依赖**:
@@ -59,7 +63,7 @@
    npm run dev
    ```
 
-### 服务器部署
+### 服务器部署（把env.example文件名改成.env）.env里面的配置必须配置
 
 1. **下载安装包**：
    进入项目目录终端，第一次部署运行这个命令
@@ -74,6 +78,11 @@
    ./deploy.sh
    ```
    然后运行：http://你的服务器ip:3010，即可访问项目
+   # Admin Key/管理员密钥/作用：导入数据表和初始化数据表
+   ADMIN_KEY=123456  # 替换为你的实际密钥 
+   # http://localhost:3000/api/init 本地开发初始化数据库
+   # http://localhost:3000/api/cleanup 本地开发清除数据库（先执行后面带这个/api/cleanup再执行后面带这个/api/init）按照顺序
+   # 如果是部署到服务器，请使用 http://你的服务器ip:3000/api/init 和 http://你的服务器ip:3000/api/cleanup 来初始化和清除数据库
    **如果访问不了，请检查防火墙是否放行3010端口**
    如果需要域名访问，请自行请教别人或者联系QQ362856178，反向代理不会的找我
 
@@ -106,11 +115,23 @@
 
 ## 更新日志
 
-### v1.0.0 (2024-12-31)
+### v1.0.1 (2025-01-04)
+- 🔧 优化图片解析功能
+- 🐛 修复图片内容显示问题
+- ✨ 添加公告管理功能
+- 💄 优化移动端界面样式
+- 🚀 提升解析成功率
+- 👥 用户管理系统
+- 🔑 API 密钥管理
+- 📊 数据统计功能
+- ⚙️ 系统设置功能
+
+### v1.0.0 (2024-01-01)
 - 🎉 首次发布
 - ✨ 支持多平台视频解析
 - 🎨 支持深色模式
 - 📱 支持移动端
+
 
 ## 贡献
 
