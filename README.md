@@ -46,9 +46,9 @@
 - 支持全平台...
 
 ## 部署方式
- **Node.js不得低于20版本**
- **Redis必须安装**
- **MySQL必须安装**
+ 1.**Node.js不得低于20版本**
+ 2.**Redis必须安装**
+ 3.**MySQL必须安装**
 
 ### 本地开发
 1. **安装依赖**:
@@ -78,11 +78,11 @@
    ./deploy.sh
    ```
    然后运行：http://你的服务器ip:3010，即可访问项目
-   # Admin Key/管理员密钥/作用：导入数据表和初始化数据表
+   ### Admin Key/管理员密钥/作用：导入数据表和初始化数据表
    ADMIN_KEY=123456  # 替换为你的实际密钥 
-   # http://localhost:3000/api/init 本地开发初始化数据库
-   # http://localhost:3000/api/cleanup 本地开发清除数据库（先执行后面带这个/api/cleanup再执行后面带这个/api/init）按照顺序
-   # 如果是部署到服务器，请使用 http://你的服务器ip:3000/api/init 和 http://你的服务器ip:3000/api/cleanup 来初始化和清除数据库
+   ### http://localhost:3000/api/init 本地开发初始化数据库
+   ### http://localhost:3000/api/cleanup 本地开发清除数据库（先执行后面带这个/api/cleanup再执行后面带这个/api/init）按照顺序
+   ### 如果是部署到服务器，请使用 http://你的服务器ip:3000/api/init 和 http://你的服务器ip:3000/api/cleanup 来初始化和清除数据库
    **如果访问不了，请检查防火墙是否放行3010端口**
    如果需要域名访问，请自行请教别人或者联系QQ362856178，反向代理不会的找我
 
