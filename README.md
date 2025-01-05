@@ -66,13 +66,7 @@
 ### 服务器部署（把env.example文件名改成.env）.env里面的配置必须配置
 
 1. **下载安装包**：
-   进入项目目录终端，第一次部署运行这个命令
-   
-   ```bash
-   pm2 start ecosystem.config.cjs
-   ```
-
-2. **然后运行这个命令**：
+ **然后运行这个命令**：
    
    ```bash
    ./deploy.sh
