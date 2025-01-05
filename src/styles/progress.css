@@ -1,0 +1,26 @@
+@keyframes progress-transform {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 9999px;
+  transition: transform 500ms ease;
+  transform-origin: left;
+  animation: progress-transform 500ms ease;
+}
+
+.progress-bar {
+  transform: translateX(calc(-100% + var(--progress-value, 0%)));
+}
+
+.progress-bar[data-value] {
+  --progress-value: attr(data-value number);
+}

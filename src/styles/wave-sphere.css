@@ -1,0 +1,49 @@
+.wave-sphere-container {
+  position: relative;
+  display: inline-block;
+}
+
+.wave-sphere-container[data-sphere-color] {
+  --wave-sphere-color: var(--default-sphere-color, attr(data-sphere-color));
+}
+
+.wave-sphere-canvas {
+  border-radius: 9999px;
+}
+
+.wave-sphere-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.wave-sphere-value {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: var(--wave-sphere-color);
+}
+
+/* 添加响应式字体大小 */
+@media (max-width: 640px) {
+  .wave-sphere-value {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  .wave-sphere-label {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+}
+
+.wave-sphere-label {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--muted-foreground);
+  margin-top: 0.25rem;
+} 
